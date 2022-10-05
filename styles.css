@@ -6,10 +6,12 @@ body {
 .titleContainer {
     background-color: #DAE5D0;
     height: 20vh;
-    min-height: 100px;
+    min-height: 110px;
     display: flex;
     align-items: center;
     justify-content: left;
+    box-shadow: 0 5px 15px #b9c4b1;
+    position: relative;
 }
 
 .title {
@@ -18,6 +20,8 @@ body {
     display: flex;
     align-items: center;
     padding-top: 2%;
+    padding-left: 2%;
+
 }
 
 .icon {
@@ -27,10 +31,20 @@ body {
 
 .mainContainer {
     background-color: #F9EBC8;
-    height: 80vh;
+    height: 77vh;
 }
 
 .main {
     padding-left: 5%;
     padding-top: 5%;
+}
+
+.footer {
+    background-color: #F9EBC8;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+#iconLink {
+    color: black;   
 }
