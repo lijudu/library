@@ -3,15 +3,34 @@ body {
     font-family: "montserrat", Arial, Helvetica, sans-serif;
 }
 
-.title {
+.titleContainer {
     background-color: #DAE5D0;
-    height: 1fr;
+    height: 20vh;
     min-height: 100px;
-    padding: 10% 10% 10% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.title {
+    height: 20vh;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    padding-top: 2%;
+}
+
+.icon {
+    display: flex;
+    padding-left: 4%;
+}
+
+.mainContainer {
+    background-color: #F9EBC8;
+    height: 80vh;
 }
 
 .main {
-    background-color: #F9EBC8;
-    height: 4fr;
-    padding: 10% 10% 10% 10%;
+    padding-left: 5%;
+    padding-top: 5%;
 }
