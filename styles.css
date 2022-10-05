@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+}
+
+.title {
+    background-color: #DAE5D0;
+    height: 20vh;
+    min-height: 100px;
+}
+
+.main {
+    background-color: #F9EBC8;
+    height: 80vh;
+}
