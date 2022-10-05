@@ -1,14 +1,17 @@
 body {
     margin: 0;
+    font-family: "montserrat", Arial, Helvetica, sans-serif;
 }
 
 .title {
     background-color: #DAE5D0;
-    height: 20vh;
+    height: 1fr;
     min-height: 100px;
+    padding: 10% 10% 10% 10%;
 }
 
 .main {
     background-color: #F9EBC8;
-    height: 80vh;
+    height: 4fr;
+    padding: 10% 10% 10% 10%;
 }
