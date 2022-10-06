@@ -18,7 +18,32 @@
             <div class="title">My Library</div>
         </div>
         <div class="mainContainer">
-            <div class="main">Main Body</div>
+            <div class="addNew">
+                <div class="bookContainer">
+                    <div class="book"><label class="bookLabel">Book</label></div>
+                    <input type="text" class="bookInput" tabindex="1">
+                </div>
+                <div class="authorContainer">
+                    <div class="author"><label class="authorLabel">Author</label></div>
+                    <input type="text" class="authorInput">
+                </div>
+                <div class="statusContaier">
+                    <div class="status"><label for="statusToggle">Status</label></div>
+                    <select name="readStatus" id="readStatus">
+                        <option value="hasRead">Read</option>
+                        <option value="notRead">Unread</option>
+                    </select>
+                </div>
+            </div>
+            <div class="submitContainer">
+                <button id="submit">SUBMIT</button>
+            </div>
+            <div class="libraryContainer">
+                <div class="bookName">Name</div>
+                <div class="authorName">Author</div>
+                <div class="bookStatus">Status</div>
+                <div class="delete">Delete</div>
+            </div>
         </div>
         <div class="footer">
             <a target="_blank" href="https://icons8.com/icon/nt7jrhMPqVjW/storytelling" id="iconLink">Storytelling</a> icon by <a target="_blank" href="https://icons8.com" id="iconLink">Icons8</a>

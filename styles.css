@@ -34,15 +34,77 @@ body {
     height: 77vh;
 }
 
-.main {
-    padding-left: 5%;
-    padding-top: 5%;
+.addNew {
+    padding: 5% 5% 1%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.submitContainer {
+    padding: 0 5%;
+}
+
+
+.bookInput, .authorInput {
+    width: 30vw;
+    height: 30px;
+    background-color: #FEFBE7;
+    border: 1px solid black;
+    border-radius: 5px;   
+    font-family: "montserrat";
+    font-size: 16px;
+}
+
+
+#readStatus {
+    height: 35px;
+    padding: 2px 2px;
+    width: 100px;
+    background-color: #FEFBE7;
+    border: 1px solid black;
+    border-radius: 5px;  
+    font-size: 16px;
+    font-family: "montserrat";
+}
+
+.book, .author, .status {
+    font-size: 20px;
+    font-weight:bold;
+}
+
+.submitContainer{
+    padding-top: 10px;
+}
+
+#submit {
+    width: 100px;
+    height: 30px;
+    background-color: #A0BCC2;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: #FEFBE7;
+    font-size: 1em;
+}
+
+#submit:hover {
+    background-color: #a0aec2;
 }
 
 .footer {
     background-color: #F9EBC8;
     text-align: center;
     font-size: 0.8em;
+}
+
+.libraryContainer {
+    padding: 5% 5%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.bookName, .authorName, .bookStatus, .delete {
+    font-size: 18px;
 }
 
 #iconLink {
