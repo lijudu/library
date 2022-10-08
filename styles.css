@@ -1,4 +1,6 @@
-:root
+:root {
+    --rowNum: ""
+}
 
 body {
     margin: 0;
@@ -70,7 +72,7 @@ body {
     font-family: "montserrat";
 }
 
-.book, .author, .status {
+.bookTitle, .author, .status {
     font-size: 20px;
     font-weight:bold;
 }
@@ -79,7 +81,7 @@ body {
     padding-top: 10px;
 }
 
-#submit {
+#submit, #deleteBTN {
     width: 100px;
     height: 30px;
     background-color: #A0BCC2;
@@ -89,7 +91,7 @@ body {
     font-size: 1em;
 }
 
-#submit:hover {
+#submit:hover, #deleteBTN:hover {
     background-color: #a0aec2;
 }
 
@@ -100,18 +102,23 @@ body {
     margin-bottom: 0;
 }
 
-.libraryContainer {
+#iconLink {
+    color: black;   
+}
+
+#libraryContainer {
     padding: 5% 5% 0;
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 
+    grid-template-rows: repeat((--rowNum), 1fr);
     
 }
 
-.bookName, .authorName, .bookStatus, .delete {
-    font-size: 18px;
+#bookName, #authorName, #bookStatus, #delete {
+    font-size: 20px;
 }
 
-#iconLink {
-    color: black;   
+.item, .newBook {
+    font-size: 20px;
+    padding-top: 5%;
 }
