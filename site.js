@@ -14,38 +14,31 @@ function Book(title, author, status) {
     }
 }
 
-function addArray(Book){
-    myLibrary.push(Book);
-    console.log(myLibrary);
+function addArray(){
+
 }
 
-const titleContainer = document.getElementById("bookName")
-const authorContainer = document.getElementById("authorName")
+const container = document.getElementById('libraryContainer')
+const submitBTN = document.getElementById('submit')
 
-const newBook = document.createElement("p")
-const newBook2 = document.createElement("p")
-const newAuthor = document.createElement("p")
+submitBTN.addEventListener('click', createCard)
 
-// let newEntry = document.createTextNode(myLibrary[1].title);
-newBook.innerText = myLibrary[1].title
-newAuthor.innerText = myLibrary[1].author;
-newBook2.innerText = myLibrary[2].title;
-
-
-function addBookToLibrary() {
-    titleContainer.appendChild(newBook)
-    titleContainer.appendChild(newBook2)
-    authorContainer.appendChild(newAuthor)
+function createCard(){
+    // create new Card
+    const newDiv = document.createElement('div')
+    container.appendChild(newDiv)
+    newDiv.classList.add('newCard')
+    // fill out info in Card (title, author, read, delete)
+    const newCard = document.querySelectorAll('.newCard')
 }
 
 
-addBookToLibrary(myLibrary)
+// function addBookToLibrary() {
+//     let mandu = myLibrary[0].title
+//     newDiv.innerText = mandu
+//     container.appendChild(newDiv)
+// }
 
 
+// addBookToLibrary(myLibrary)
 
-
-// 1) Create new row when "submit" clicked
-// 2) loop through myLibrary and add information (title=column1, author=column2, read=column3, add deleteBTN)
-// 3) when "submit" clicked, add to myLibrary 
-// 4) delete button 
-// 5) change read status to toggle 

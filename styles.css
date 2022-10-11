@@ -35,7 +35,6 @@ body {
 
 .mainContainer {
     background-color: #F9EBC8;
-    height: 78vh;
 }
 
 .addNew {
@@ -81,7 +80,7 @@ body {
     padding-top: 10px;
 }
 
-#submit, #deleteBTN {
+#submit {
     width: 100px;
     height: 30px;
     background-color: #A0BCC2;
@@ -91,7 +90,7 @@ body {
     font-size: 1em;
 }
 
-#submit:hover, #deleteBTN:hover {
+#submit:hover {
     background-color: #a0aec2;
 }
 
@@ -111,14 +110,13 @@ body {
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat((--rowNum), 1fr);
+    row-gap: 30px;
+    min-height: 45vh;
     
 }
 
-#bookName, #authorName, #bookStatus, #delete {
-    font-size: 20px;
-}
-
-.item, .newBook {
-    font-size: 20px;
-    padding-top: 5%;
+.newCard {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
 }
