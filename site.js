@@ -1,9 +1,5 @@
 
 const hobbit = new Book('The Hobbit', 'J.R.R. Tolkien', 'read');
-const dune = new Book ('Dune', 'Frank Hebert', 'read');
-const kafka = new Book('Kafka on the Shore', 'Haruki Murakami', 'read');
-
-let testarr = [dune,kafka]
 
 let myLibrary = [hobbit];
 
@@ -16,17 +12,21 @@ function Book(title, author, status) {
     }
 }
 
-function addArray(book){
-    myLibrary.push(book)
-}
-
-testarr.forEach((book) => addArray(book));
-
 
 const container = document.getElementById('libraryContainer')
 const submitBTN = document.getElementById('submit')
 
-submitBTN.addEventListener('click', createCard)
+
+
+function createBook() {
+    let bookTitle = document.getElementById('bookInput').value 
+    let authorName = document.getElementById('authorInput').value
+    let readBook = document.getElementById('readStatus').value
+    const newBook = new Book(bookTitle, authorName, readBook)
+    myLibrary.push(newBook)
+    console.log(newBook)
+    console.log(myLibrary)
+}
 
 function createCard(){
     // create new Card
@@ -38,35 +38,43 @@ function createCard(){
     const readStatus = document.createElement('button')
     const delBook = document.createElement('button')
     const lineBreak = document.createElement('br')
-    readStatus.id='readBTN'
-    delBook.id= 'deleteBTN'
+    readStatus.classList.add('readBTN')
+    delBook.classList.add('deleteBTN')
     newDiv.appendChild(newTitle)
     newDiv.appendChild(newAuthor)
     newDiv.appendChild(readStatus)
     newDiv.appendChild(lineBreak)
     newDiv.appendChild(delBook)
-    readBTN = document.getElementById('readBTN')
-    deleteBTN = document.getElementById('deleteBTN')
-    readShow = document.createTextNode('Read')
     delShow = document.createTextNode('Delete')
     // fill out info in Card (title, author, read, delete)
-    let sampleTitle = myLibrary[1].title
-    let sampleAuthor = myLibrary[1].author
+    let sampleTitle = myLibrary[myLibrary.length - 1].title
+    let sampleAuthor = myLibrary[myLibrary.length - 1].author
+    let sampleRead = myLibrary[myLibrary.length - 1].status
+    readShow = document.createTextNode(sampleRead)
     newTitle.innerText = sampleTitle
     newAuthor.innerText = sampleAuthor
     readStatus.appendChild(readShow)
     delBook.appendChild(delShow)
-
-
+    
 }
 
+submitBTN.addEventListener('click', createLibrary)
 
-// function addBookToLibrary() {
-//     let mandu = myLibrary[0].title
-//     newDiv.innerText = mandu
-//     container.appendChild(newDiv)
-// }
+function createLibrary() {
+    createBook()
+    createCard()
+}
 
+// delete and read buttons
+function hasClass(elem, className) {
+    return elem.classList.contains(className)
+}
 
-// addBookToLibrary(myLibrary)
+document.addEventListener('click', function(e) {
+    if (hasClass(e.target, 'deleteBTN')) {
+        console.log('delete!')
+    } else if (hasClass(e.target, 'readBTN')) {
+        console.log('read?')
+    }
+}, false)
 

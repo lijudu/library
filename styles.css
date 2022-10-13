@@ -19,13 +19,13 @@ body {
 
 
 .titleContainer {
-    background-color: #DAE5D0;
+    background-color: #FFE3E1;
     height: 20%;
     min-height: 110px;
     display: flex;
     align-items: center;
     justify-content: left;
-    box-shadow: 0 5px 15px #b9c4b1;
+    box-shadow: 5px 5px 10px #FFD1D1;
     position: relative;
 }
 
@@ -45,7 +45,7 @@ body {
 }
 
 .mainContainer {
-    background-color: #F9EBC8;
+    background-color: #FFF5E4;
 }
 
 .addNew {
@@ -60,10 +60,10 @@ body {
 }
 
 
-.bookInput, .authorInput {
+#bookInput, #authorInput {
     width: 30vw;
     height: 30px;
-    background-color: #FEFBE7;
+    background-color: #FFF5E4;
     border: 1px solid black;
     border-radius: 5px;   
     font-family: "montserrat";
@@ -75,7 +75,7 @@ body {
     height: 35px;
     padding: 2px 2px;
     width: 100px;
-    background-color: #FEFBE7;
+    background-color: #FFF5E4;
     border: 1px solid black;
     border-radius: 5px;  
     font-size: 16px;
@@ -106,7 +106,7 @@ body {
 }
 
 .footer {
-    background-color: #F9EBC8;
+    background-color: #FFF5E4;
     text-align: center;
     font-size: 0.8em;
     margin-bottom: 0;

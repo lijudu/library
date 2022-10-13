@@ -21,17 +21,17 @@
             <div class="addNew">
                 <div class="bookContainer">
                     <div class="bookTitle"><label class="bookLabel">Title</label></div>
-                    <input type="text" class="bookInput" tabindex="1">
+                    <input type="text" id="bookInput" required>
                 </div>
                 <div class="authorContainer">
                     <div class="author"><label class="authorLabel">Author</label></div>
-                    <input type="text" class="authorInput">
+                    <input type="text" id="authorInput" required>
                 </div>
                 <div class="statusContaier">
                     <div class="status"><label for="statusToggle">Status</label></div>
                     <select name="readStatus" id="readStatus">
-                        <option value="hasRead">Read</option>
-                        <option value="notRead">Unread</option>
+                        <option value="Read">Read</option>
+                        <option value="Unread">Unread</option>
                     </select>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                     <p>The Hobbit</p>
                     <p>JRR Tolkien</p>
                     <p>Read</p>
-                    <button>Delete</button>
+                    <button class="deleteBTN">Delete</button>
                 </div>
             </div>
         </div>
