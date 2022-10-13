@@ -40,6 +40,8 @@ function createCard(){
     const lineBreak = document.createElement('br')
     readStatus.classList.add('readBTN')
     delBook.classList.add('deleteBTN')
+    delBook.name = document.getElementById('bookInput').value
+    newTitle.id = document.getElementById('bookInput').value
     newDiv.appendChild(newTitle)
     newDiv.appendChild(newAuthor)
     newDiv.appendChild(readStatus)
@@ -58,6 +60,7 @@ function createCard(){
     
 }
 
+
 submitBTN.addEventListener('click', createLibrary)
 
 function createLibrary() {
@@ -73,7 +76,11 @@ function hasClass(elem, className) {
 
 document.addEventListener('click', function(e) {
     if (hasClass(e.target, 'deleteBTN')) {
-        e.target.parentElement.remove();
+        e.target.parentElement.remove()
+        removeBook = e.target.name
+        const removeIndex = myLibrary.findIndex(item => item.title === removeBook)
+        myLibrary.splice(removeIndex, 1)
+        console.log(myLibrary)
     } else if (hasClass(e.target, 'readBTN')) {
         if (e.target.innerText == 'Unread') {
             e.target.innerText = 'Read'
