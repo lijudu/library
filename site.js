@@ -70,8 +70,10 @@ function hasClass(elem, className) {
     return elem.classList.contains(className)
 }
 
+
 document.addEventListener('click', function(e) {
     if (hasClass(e.target, 'deleteBTN')) {
+        e.target.parentElement.remove();
         console.log('delete!')
     } else if (hasClass(e.target, 'readBTN')) {
         console.log('read?')
