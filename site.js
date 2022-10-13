@@ -74,9 +74,14 @@ function hasClass(elem, className) {
 document.addEventListener('click', function(e) {
     if (hasClass(e.target, 'deleteBTN')) {
         e.target.parentElement.remove();
-        console.log('delete!')
     } else if (hasClass(e.target, 'readBTN')) {
-        console.log('read?')
+        if (e.target.innerText == 'Unread') {
+            e.target.innerText = 'Read'
+            console.log('Unread')
+        } else if (e.target.innerText == 'Read') {
+            e.target.innerText = 'Unread'
+            console.log('Read')
+        }
     }
 }, false)
 
