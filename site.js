@@ -41,6 +41,7 @@ function createCard(){
     readStatus.classList.add('readBTN')
     delBook.classList.add('deleteBTN')
     delBook.name = document.getElementById('bookInput').value
+    readStatus.name = document.getElementById('bookInput').value
     newTitle.id = document.getElementById('bookInput').value
     newDiv.appendChild(newTitle)
     newDiv.appendChild(newAuthor)
@@ -84,11 +85,17 @@ document.addEventListener('click', function(e) {
     } else if (hasClass(e.target, 'readBTN')) {
         if (e.target.innerText == 'Unread') {
             e.target.innerText = 'Read'
-            console.log('Unread')
+            updateStatus = e.target.name
+            const updateStatusIndex = myLibrary.findIndex(item => item.title === updateStatus)
+            myLibrary[updateStatusIndex].status = 'Read'
+            console.log(myLibrary)
         } else if (e.target.innerText == 'Read') {
             e.target.innerText = 'Unread'
-            console.log('Read')
+            updateStatus = e.target.name
+            const updateStatusIndex = myLibrary.findIndex(item => item.title === updateStatus)
+            myLibrary[updateStatusIndex].status = 'Unead'
+            console.log(myLibrary)
         }
-    }
+    } 
 }, false)
 
